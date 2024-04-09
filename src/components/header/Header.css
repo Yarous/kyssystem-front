@@ -18,6 +18,14 @@ header {
 	display: flex;
 }
 
+.burger-toggler {
+	border: none;
+}
+
+.burger-toggler:focus {
+	box-shadow: none;
+}
+
 @media (min-width: 992px) {
 	.theme-switcher {
 		margin-left: auto;
@@ -25,13 +33,6 @@ header {
 	.user-avatar {
 		margin-left: 7px;
 	}
-}
-.burger-toggler {
-	border: none;
-}
-
-.burger-toggler:focus {
-	box-shadow: none;
 }
 
 @media (max-width: 991px) {
