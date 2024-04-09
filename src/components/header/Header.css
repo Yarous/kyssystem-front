@@ -1,0 +1,43 @@
+header {
+	min-height: 20px;
+	padding-right: 15px;
+}
+
+.header-link {
+	color: black !important;
+	font-family: 'Tahoma';
+	font-size: 20px !important;
+}
+
+.header-link:hover {
+	color: #3c696c !important;
+}
+
+.theme-switcher,
+.user-avatar {
+	display: flex;
+}
+
+@media (min-width: 992px) {
+	.theme-switcher {
+		margin-left: auto;
+	}
+	.user-avatar {
+		margin-left: 7px;
+	}
+}
+.burger-toggler {
+	border: none;
+}
+
+.burger-toggler:focus {
+	box-shadow: none;
+}
+
+@media (max-width: 991px) {
+	.theme-switcher img,
+	.user-avatar img {
+		width: 30px;
+		height: 30px;
+	}
+}
