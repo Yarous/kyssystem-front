@@ -42,3 +42,27 @@ header {
 		height: 30px;
 	}
 }
+.main-header.light {
+	background-color: #d9d9d9;
+}
+
+.main-header.dark .dark-link {
+	color: #d3d3d3;
+}
+
+.main-header.light .light-link {
+	color: inherit;
+}
+
+.theme-switcher img {
+	cursor: pointer;
+	transition: transform 0.3s;
+}
+
+.theme-switcher img:hover {
+	transform: rotate(90deg);
+}
+
+.theme-switcher img:active {
+	transform: rotate(360deg);
+}
