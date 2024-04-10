@@ -54,15 +54,19 @@ header {
 	color: inherit;
 }
 
+.main-header.dark {
+	background-color: #24292e;
+}
+
 .theme-switcher img {
 	cursor: pointer;
 	transition: transform 0.3s;
 }
 
 .theme-switcher img:hover {
-	transform: rotate(90deg);
+	transform: rotate(90deg); /* Поворот при наведении */
 }
 
 .theme-switcher img:active {
-	transform: rotate(360deg);
+	transform: rotate(360deg); /* Полный поворот после клика */
 }
