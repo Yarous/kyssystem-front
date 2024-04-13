@@ -1,0 +1,72 @@
+header {
+	min-height: 20px;
+	padding-right: 15px;
+}
+
+.header-link {
+	color: black !important;
+	font-family: 'Tahoma';
+	font-size: 20px !important;
+}
+
+.header-link:hover {
+	color: #3c696c !important;
+}
+
+.theme-switcher,
+.user-avatar {
+	display: flex;
+}
+
+.burger-toggler {
+	border: none;
+}
+
+.burger-toggler:focus {
+	box-shadow: none;
+}
+
+@media (min-width: 992px) {
+	.theme-switcher {
+		margin-left: auto;
+	}
+	.user-avatar {
+		margin-left: 7px;
+	}
+}
+
+@media (max-width: 991px) {
+	.theme-switcher img,
+	.user-avatar img {
+		width: 30px;
+		height: 30px;
+	}
+}
+.main-header.light {
+	background-color: #d9d9d9;
+}
+
+.main-header.dark .dark-link {
+	color: #d3d3d3;
+}
+
+.main-header.light .light-link {
+	color: inherit;
+}
+
+.main-header.dark {
+	background-color: #24292e;
+}
+
+.theme-switcher img {
+	cursor: pointer;
+	transition: transform 0.3s;
+}
+
+.theme-switcher img:hover {
+	transform: rotate(90deg); /* Поворот при наведении */
+}
+
+.theme-switcher img:active {
+	transform: rotate(360deg); /* Полный поворот после клика */
+}
