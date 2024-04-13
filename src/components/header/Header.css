@@ -26,6 +26,14 @@ header {
 	box-shadow: none;
 }
 
+.main-header.light .burger-toggler {
+	filter: none;
+}
+
+.main-header.dark .burger-toggler {
+	filter: invert(100%);
+}
+
 @media (min-width: 992px) {
 	.theme-switcher {
 		margin-left: auto;

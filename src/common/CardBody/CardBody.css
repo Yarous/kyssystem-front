@@ -1,8 +1,10 @@
-.cardbody.light {
-	border-radius: 17px;
-	background-color: #d9d9d9;
+.cardBody {
+	flex-grow: 1;
+	margin: 0 10px;
 }
-.cardbody.dark {
-	border-radius: 17px;
-	background-color: #1f2428;
+
+.content {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 20px;
 }

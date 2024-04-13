@@ -1,12 +1,15 @@
+import React from 'react'
+import CardBody from './common/CardBody/CardBody'
 import Header from './components/header/Header'
-import { Outlet } from 'react-router-dom'
 
-function App() {
+const App: React.FC = () => {
 	return (
-		<>
+		<div className='app-container'>
 			<Header />
-			<Outlet />
-		</>
+			<div className='content'>
+				<CardBody theme='light'>{/* Контент CardBody */}</CardBody>
+			</div>
+		</div>
 	)
 }
 

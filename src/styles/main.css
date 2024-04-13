@@ -1,7 +1,5 @@
-.full-height {
-	min-height: calc(100vh - 56px);
-}
+.full-height,
 .max-full-height {
-	min-height: calc(100vh - 56px);
-	max-height: calc(100vh - 56px);
+	min-height: calc(100vh - [Header Height]px);
+	max-height: calc(100vh - [Header Height]px);
 }
