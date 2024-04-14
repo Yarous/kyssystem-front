@@ -39,10 +39,13 @@ const Header: React.FC<HeaderProps> = ({ theme, toggleTheme }) => {
 					/>
 					<Navbar.Collapse id='responsive-navbar-nav'>
 						<Nav className='me-auto'>
-							<Nav.Link href='#olympiad' className={`${theme}-link`}>
+							<Nav.Link
+								href='#olympiad'
+								className={`${theme}-link header-link`}
+							>
 								Олимпиада
 							</Nav.Link>
-							<Nav.Link href='#help' className={`${theme}-link`}>
+							<Nav.Link href='#help' className={`${theme}-link header-link`}>
 								Помощь
 							</Nav.Link>
 						</Nav>
