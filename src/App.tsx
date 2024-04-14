@@ -1,14 +1,23 @@
-import React from 'react'
-import CardBody from './common/CardBody/CardBody'
+import { useState } from 'react'
 import Header from './components/header/Header'
+import './styles/main.css'
+import CardBody from './common/CardBody/CardBody'
 
-const App: React.FC = () => {
+function App() {
+	// Указываем тип состояния theme как 'light' | 'dark'
+	const [theme, setTheme] = useState<'light' | 'dark'>('light')
+
+	const toggleTheme = () => {
+		setTheme(theme === 'light' ? 'dark' : 'light')
+		document.documentElement.className = theme === 'light' ? 'dark' : 'light'
+	}
+
 	return (
-		<div className='app-container'>
-			<Header />
-			<div className='content'>
-				<CardBody theme='light'>{/* Контент CardBody */}</CardBody>
-			</div>
+		<div className='App'>
+			<Header theme={theme} toggleTheme={toggleTheme} />
+			<CardBody theme={theme}>
+				<p>HellO!</p>
+			</CardBody>
 		</div>
 	)
 }

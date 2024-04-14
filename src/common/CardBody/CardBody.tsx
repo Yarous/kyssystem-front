@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, Col } from 'react-bootstrap'
+import { Card, Col, Container } from 'react-bootstrap'
 import './CardBody.css'
 
 export type CardBodyProps = {
@@ -9,28 +9,28 @@ export type CardBodyProps = {
 }
 
 export default function CardBody({
-	colSize = 5,
+	colSize = 12,
 	children,
 	theme,
 }: CardBodyProps) {
 	const backgroundColor = theme === 'light' ? '#C7C6C6' : '#1F2428'
-	const borderColor = theme === 'light' ? '#D9D9D9' : '#24292E'
 
 	return (
-		<div className='cardBody'>
-			<Col md={colSize}>
-				<Card
-					style={{
-						backgroundColor,
-						borderColor,
-						borderRadius: '17px',
-						borderWidth: '1px',
-						overflow: 'hidden',
-					}}
-				>
-					<Card.Body>{children}</Card.Body>
-				</Card>
-			</Col>
+		<div className={`cardBody ${theme}`}>
+			<Container>
+				<Col md={colSize}>
+					<Card
+						style={{
+							backgroundColor,
+							borderRadius: '17px',
+							borderWidth: '1px',
+							overflow: 'hidden',
+						}}
+					>
+						<Card.Body>{children}</Card.Body>
+					</Card>
+				</Col>
+			</Container>
 		</div>
 	)
 }

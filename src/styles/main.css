@@ -1,5 +1,16 @@
-.full-height,
+.full-height {
+	min-height: calc(100vh - 56px);
+}
 .max-full-height {
-	min-height: calc(100vh - [Header Height]px);
-	max-height: calc(100vh - [Header Height]px);
+	min-height: calc(100vh - 56px);
+	max-height: calc(100vh - 56px);
+}
+.light {
+	background-color: #d3d3d3;
+	color: #000;
+}
+
+.dark {
+	background-color: #24292e;
+	color: #ddd;
 }
