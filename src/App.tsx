@@ -16,7 +16,12 @@ function App() {
 		<div className='App'>
 			<Header theme={theme} toggleTheme={toggleTheme} />
 			<CardBody theme={theme}>
-				<p>HellO!</p>
+				<p>
+					In adipisicing esse cillum amet anim. Ex anim deserunt aliquip in
+					dolor minim eiusmod. Ex ex incididunt tempor et ea dolore deserunt
+					adipisicing ea excepteur commodo sit. Ullamco enim irure non velit
+					consequat nisi sunt enim enim ea.
+				</p>
 			</CardBody>
 		</div>
 	)
