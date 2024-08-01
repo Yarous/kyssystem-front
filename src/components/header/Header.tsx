@@ -1,19 +1,20 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 import ThemeToggle from './ThemeToggle'
+import { Container, Navbar, Nav } from 'react-bootstrap'
 import LogoWhite from '../../assets/logo/logoWhite.svg'
 import LogoDark from '../../assets/logo/logoDark.svg'
 import UserAvatarLight from '../../assets/logo/userAvatarLight.svg'
 import UserAvatarDark from '../../assets/logo/userAvatarDark.svg'
-import { Container, Navbar, Nav } from 'react-bootstrap'
 import './Header.css'
 
-export default function Header() {
-	const [expanded, setExpanded] = useState(false)
-	const [theme, setTheme] = useState<'light' | 'dark'>('light')
+interface HeaderProps {
+	theme: 'light' | 'dark'
+	toggleTheme: () => void
+}
 
-	const toggleTheme = () => {
-		setTheme(theme === 'light' ? 'dark' : 'light')
-	}
+// Использование интерфейса для аннотации типов пропсов
+const Header: React.FC<HeaderProps> = ({ theme, toggleTheme }) => {
+	const [expanded, setExpanded] = useState(false)
 
 	// Выбор лого и аватара в зависимости от темы
 	const logo = theme === 'light' ? LogoWhite : LogoDark
@@ -33,14 +34,18 @@ export default function Header() {
 					</Navbar.Brand>
 					<Navbar.Toggle
 						onClick={() => setExpanded(!expanded)}
+						aria-controls='responsive-navbar-nav'
 						className='burger-toggler'
 					/>
 					<Navbar.Collapse id='responsive-navbar-nav'>
 						<Nav className='me-auto'>
-							<Nav.Link href='#olympiad' className={`${theme}-link`}>
+							<Nav.Link
+								href='#olympiad'
+								className={`${theme}-link header-link`}
+							>
 								Олимпиада
 							</Nav.Link>
-							<Nav.Link href='#help' className={`${theme}-link`}>
+							<Nav.Link href='#help' className={`${theme}-link header-link`}>
 								Помощь
 							</Nav.Link>
 						</Nav>
@@ -56,3 +61,5 @@ export default function Header() {
 		</div>
 	)
 }
+
+export default Header

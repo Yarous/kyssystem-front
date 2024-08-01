@@ -1,0 +1,20 @@
+.cardBody {
+	flex-grow: 1;
+}
+.cardBody.light .cardBody.light p {
+	background-color: #d3d3d3;
+}
+.cardBody.light p {
+	color: #24292e;
+}
+.cardBody.dark {
+	background-color: #24292e;
+}
+
+.cardBody.dark p {
+	color: #d3d3d3;
+}
+.content {
+	display: flex;
+	margin-top: 20px;
+}

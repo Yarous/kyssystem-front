@@ -4,8 +4,7 @@ header {
 }
 
 .header-link {
-	color: black !important;
-	font-family: 'Tahoma';
+	font-family: 'Tahoma', serif;
 	font-size: 20px !important;
 }
 
@@ -26,6 +25,14 @@ header {
 	box-shadow: none;
 }
 
+.main-header.light .burger-toggler {
+	filter: none;
+}
+
+.main-header.dark .burger-toggler {
+	filter: invert(100%); /* Стандартный цвет для темной темы */
+}
+
 @media (min-width: 992px) {
 	.theme-switcher {
 		margin-left: auto;
@@ -43,7 +50,7 @@ header {
 	}
 }
 .main-header.light {
-	background-color: #d9d9d9;
+	background-color: #d3d3d3;
 }
 
 .main-header.dark .dark-link {
